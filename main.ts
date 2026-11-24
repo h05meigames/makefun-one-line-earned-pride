@@ -23,7 +23,8 @@
 //
 // Node 22, standard library only. Writes the line to /output/entry.txt
 // with a genuine length guard: it throws if the line is outside 1–240
-// characters (counted in code points, as the gate counts characters).
+// characters (counted in code points, as the gate counts characters),
+// blank, or more than one line.
 
 import { mkdirSync, writeFileSync } from "node:fs";
 
@@ -33,6 +34,12 @@ const LINE =
 const length = [...LINE].length;
 if (length < 1 || length > 240) {
   throw new Error(`entry must be 1-240 characters, got ${length}`);
+}
+if (LINE.trim().length === 0) {
+  throw new Error("entry must not be only whitespace");
+}
+if (LINE.includes("\n") || LINE.includes("\r")) {
+  throw new Error("entry must be a single line");
 }
 
 mkdirSync("/output", { recursive: true });
