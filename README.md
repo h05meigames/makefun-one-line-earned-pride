@@ -10,21 +10,21 @@ bounty on [make.fun](https://make.fun/r/0ene8b3q).
 
 ## The line
 
-> Three summers of scraped knees, and then one July evening, eight-year-old June rode past the mailbox, past the oak, all the way to the corner — and never once looked back.
+> The fourth loaf rose. Mara pulled it from the oven, pressed her ear to the warm crust, and heard it crackle — the sound her grandmother's kitchen used to make.
 
-One small, concrete scene — a child, a bike, a street with a mailbox and an
-oak. The pride is earned inside the line: three summers of scraped knees is
-the effort, felt in the body, not announced. Nothing congratulates her and
-nothing explains the feeling; the pride arrives with the last words, "never
-once looked back", which is the whole payoff in one read — looking back is
-what a frightened child does, and she has stopped doing it. No trophy, no
-podium, no graduation — just a girl who kept getting back on the bike until
-the street ran out under her.
+One small, concrete scene — a kitchen, an oven, a loaf of bread. The pride
+is earned inside the line: "the fourth loaf" carries three failed loaves
+before it, a long effort felt in the number, not announced. Nothing
+congratulates her and nothing explains the feeling; the pride arrives with
+the last words, "the sound her grandmother's kitchen used to make", which
+is the whole payoff in one read — she has finally made the bread she grew
+up hearing. No trophy, no podium, no graduation — just a woman who kept
+kneading until the kitchen sounded right again.
 
 ## How it works
 
 `main.ts` (Node 22, standard library only) writes the line to
-`/output/entry.txt` — one line, UTF-8, no trailing newline, 171 characters,
+`/output/entry.txt` — one line, UTF-8, no trailing newline, 159 characters,
 well within the 1–240 character gate. It guards the length in code points
 (`[...line].length`) and rejects a blank or multi-line line before writing.
 

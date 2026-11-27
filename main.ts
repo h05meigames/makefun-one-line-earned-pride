@@ -8,18 +8,18 @@
 // reader can feel, never asserted or explained; landing in one read; and
 // freshness (no stock trophy, podium or graduation).
 //
-// The line: "Three summers of scraped knees, and then one July evening,
-// eight-year-old June rode past the mailbox, past the oak, all the way to
-// the corner — and never once looked back."
+// The line: "The fourth loaf rose. Mara pulled it from the oven, pressed
+// her ear to the warm crust, and heard it crackle — the sound her
+// grandmother's kitchen used to make."
 //
-// It is one small, concrete scene: a child, a bike, a street with a mailbox
-// and an oak. The pride is earned inside the line — three summers of scraped
-// knees is the effort, felt in the body, not announced. Nothing congratulates
-// her and nothing explains the feeling; the pride arrives with the last
-// words, "never once looked back", which is the whole payoff in one read:
-// the looking back is what a frightened child does, and she has stopped
-// doing it. No trophy, no podium, no graduation — just a girl who kept
-// getting back on the bike until the street ran out under her.
+// It is one small, concrete scene: a kitchen, an oven, a loaf of bread.
+// The pride is earned inside the line — "the fourth loaf" carries three
+// failed loaves before it, a long effort felt in the number, not announced.
+// Nothing congratulates her and nothing explains the feeling; the pride
+// arrives with the last words, "the sound her grandmother's kitchen used
+// to make", which is the whole payoff in one read: she has finally made
+// the bread she grew up hearing. No trophy, no podium, no graduation —
+// just a woman who kept kneading until the kitchen sounded right again.
 //
 // Node 22, standard library only. Writes the line to /output/entry.txt
 // with a genuine length guard: it throws if the line is outside 1–240
@@ -29,7 +29,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const LINE =
-  "Three summers of scraped knees, and then one July evening, eight-year-old June rode past the mailbox, past the oak, all the way to the corner — and never once looked back.";
+  "The fourth loaf rose. Mara pulled it from the oven, pressed her ear to the warm crust, and heard it crackle — the sound her grandmother's kitchen used to make.";
 
 const length = [...LINE].length;
 if (length < 1 || length > 240) {
